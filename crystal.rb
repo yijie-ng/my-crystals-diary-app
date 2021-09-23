@@ -1,4 +1,7 @@
 class Crystal
+  attr_reader :name, :type, :shop, :price
+  attr_accessor :id
+  
   def initialize(attributes = {})
     @id = attributes[:id]
     @name = attributes[:id]
