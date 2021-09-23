@@ -28,4 +28,10 @@ class View
     print ">"
     gets.chomp.to_i
   end
+
+  def ask_id
+    puts "ID?"
+    print ">"
+    gets.chomp.to_i
+  end
 end
