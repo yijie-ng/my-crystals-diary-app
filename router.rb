@@ -9,7 +9,7 @@ class Router
     puts "My Crystals Diary App"
     puts "----------------------"
 
-    while @@running
+    while @running
       display_actions
       action = gets.chomp.to_i
       print `clear`
