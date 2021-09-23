@@ -24,13 +24,15 @@ class Repository
     crystal.id = @next_id
     @crystals << crystal
     @next_id += 1
+    save_csv
   end
 
   # Remove crystal
   def remove(crystal)
     @crystals.delete(crystal)
+    save_csv
   end
-  
+
   private
 
   def load_csv
