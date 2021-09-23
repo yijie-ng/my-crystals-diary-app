@@ -114,13 +114,13 @@ class Controller
     user_edit = @view.ask_edit
     case user_edit
     # 2a. When name, update name
-    when "name" then edit_name!
+    when "Name" then edit_name!
     # 2b. When type, update type
-    when "type" then edit_type!
+    when "Type" then edit_type!
     # 2c. When shop, update shop
-    when "shop" then edit_shop!
+    when "Shop" then edit_shop!
     # 2d. When price, update price
-    when "price" then edit_price!
+    when "Price" then edit_price!
     else
       puts "Name/Type/Shop/Price?"
     end
