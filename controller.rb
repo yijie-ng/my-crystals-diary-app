@@ -29,7 +29,21 @@ class Controller
     # 4. Display updated list
     display_crystals
   end
-  
+
+  # Remove crystal
+  def destroy!
+    # 1. List all crystals
+    display_crystals
+    # 2. Ask user for crystal id
+    id = @view.ask_id
+    # 3. Find crystal in repo
+    crystal = @crystals.find(id)
+    # 4. Delete crystal
+    @crystals.remove(crystal)
+    # 5. List updated list
+    display_crystals
+  end
+
   private
 
   def display_crystals
