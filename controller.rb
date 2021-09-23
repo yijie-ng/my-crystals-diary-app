@@ -1,4 +1,4 @@
-require_relative 'repository'
+require_relative 'crystal'
 require_relative 'view'
 
 class Controller
@@ -114,15 +114,15 @@ class Controller
     user_edit = @view.ask_edit
     case user_edit
     # 2a. When name, update name
-    when "Name" then edit_name!
+    when "name" then edit_name!
     # 2b. When type, update type
-    when "Type" then edit_type!
+    when "type" then edit_type!
     # 2c. When shop, update shop
-    when "Shop" then edit_shop!
+    when "shop" then edit_shop!
     # 2d. When price, update price
-    when "Price" then edit_price!
+    when "price" then edit_price!
     else
-      puts "Name/Type/Shop/Price?"
+      puts "name/type/shop/price?"
     end
     # 3. List updated crystals
     display_crystals
@@ -134,6 +134,6 @@ class Controller
     # 1. Fetch crystals from repo
     crystals = @crystals.all
     # 2. Send to view to display
-    @crystals.display(crystals)
+    @view.display(crystals)
   end
 end

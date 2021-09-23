@@ -33,8 +33,6 @@ class Repository
     save_csv
   end
 
-  private
-
   def load_csv
     csv_options = { headers: :first_row, header_converters: :symbol }
     CSV.foreach(@file, csv_options) do |row|

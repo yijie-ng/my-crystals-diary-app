@@ -8,19 +8,19 @@ class View
   def ask_name
     puts "Crystal name?"
     print ">"
-    gets.chomp.capitalize!
+    gets.chomp
   end
 
   def ask_type
     puts "Crystal type?"
     print ">"
-    gets.chomp.capitalize!
+    gets.chomp
   end
 
   def ask_shop
     puts "Claimed from which shop?"
     print ">"
-    gets.chomp.capitalize!
+    gets.chomp
   end
 
   def ask_price
@@ -36,8 +36,8 @@ class View
   end
 
   def ask_edit
-    puts "What do you want to edit? (Name/Type/Shop/Price)"
+    puts "What do you want to edit? (name/type/shop/price)"
     print ">"
-    gets.chomp.capitalize!
+    gets.chomp
   end
 end
